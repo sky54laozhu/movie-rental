@@ -48,8 +48,10 @@ public class Customer {
 			if ((each.get_movie().get_priceCode() == Movie.NEW_RELEASE) && each.get_daysRented() > 1){
 				frequentRenterPoints ++;
 			}
+			
 			result += "\t" + each.get_movie().get_title() + "\t" + String.valueOf(thisAmount) + "\n";
 			totalAmount += thisAmount;
+			
 		}
 		result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
 		result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
